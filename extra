@@ -1,0 +1,306 @@
+https://code.visualstudio.com/ > Install
+https://nodejs.org/en/ > Install
+https://git-scm.com/downloads > Install
+https://github.com/ > Create Account
+https://github.com/Aakashdeveloper > Follow
+https://www.postman.com/ > Install
+
+Extensions
+#Chrome
+> https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+
+# VsCode
+> Vscode-icons
+> spellCheck
+> Tabnine
+> githistory
+> gitlens
+
+
+NPM
+Basic NodeJS(in built)(Os,file,http)
+NodeJS(full Stack App) (Node-EJs-Mongo-Express)
+Third Party Api (Weather Api)
+Redis  > 6379
+RedisWithMongo
+ImageUpload(expressfileupload)
+ImageUpload(formidable)
+Node-Es6(.babel)
+MongoDb Basic >27017  (local/cloud)
+Zomato App backend
+Api with NodeJS(Rest)>1
+Swagger
+Testing
+DashBoard(Crud)
+Login/Logout(JWT)
+Oauth(with github)
+--Deployment of app---
+Heroku
+Pm2
+Nginx
+Jenkins
+Docker
+TelegramChat
+Github
+GraphQl API
+Paytm-Payment
+Nodemailer
+Oauth(with google)
+NodeJs with postgres
+FIREBASE
+--------NOT---------
+React/Angular
+Html/css/jquery
+
+microservice(aws lambda)
+upload to s3 bucket
+
+
+/////////////////
+NodeJs>
+Single Threaded
+Async 
+NonBlocking I/O
+
+Code source
+    ||
+    \/
+Byte Code(Not Required in node)
+    ||
+    \/
+Machine Code
+
+C++ + Libuv
+v8 engine
+
+open source
+> any body can contribute to development
+(supporting lib)
+node_module/dependency/packages
+
+////////////////////////////////////////////////////////////////
+NPM > Node Package Manager
+
+package.json
+> Starting point to application
+> MetaData(Name,Version,Description)
+> Package require for app
+> Script (start,build and test the app)
+
+
+////////////////////////////////////////////////////////////////
+Step to generate package.json
+///////////////
+*NodeJs must be install in laptop
+> open cmd/terminal and go inside the folder using cmd
+> npm init
+> Answer all question
+> Type "yes"
+
+
+////////////////////////
+Step to install package (local)
+///////////////////////
+> open cmd/terminal and go inside the folder using cmd
+> npm i packagename
+
+
+node_modules > Here all the package download
+package-lock > dependency tree
+.gitignore > to avoide pushing to git
+Readme.md > detail description of app
+
+
+//es5
+Ecma Script 5
+//es6
+Ecma Script 6
+
+
+var a = 10
+var b = "my age is "+a
+"my age is 10"
+
+let a = 10
+let b = `my age is ${a}`  (string literals)
+"my age is 10"
+
+//es5
+function add(a,b){
+    return a+b
+}
+add(1,2)
+3
+
+//es6
+let add = (a,b) => { return a+b}
+add(1,2)
+3
+
+///////JSON//////
+> JavaScript Object Notation
+[
+    {
+        "name":"Niki",
+        "city":"Paris"
+    },
+    {
+        "name":"Lavi",
+        "city":"Amsterdam",
+        "age":25
+    }
+]
+/////////
+from os module---
+
+let os=require('os');
+console.log(os.platform())
+console.log(os.cpus())
+console.log(os.arch())
+
+/////////
+
+readfile("filename",'utf-8',function(err,data){
+if(err) throw err;})
+writefile("filename",'data',function(){})
+appendfile("filename",'data',function(){})
+unlinkfile("filename",function(err){
+if(err) throw err;})  (to delete)
+reaname("oldfilename",'newfilename',function(err){
+	if(err) throw err;
+})
+
+////////
+Local Dependency
+> Local to folder 
+> Can be used only in one app 
+> No Admin permisiion is require to install
+> Added to package.json
+# npm i packagename
+
+global Dependency
+> Install in laptop
+> Can be use for any app
+> Will not add to package.json
+> Need Admin permisiion to install
+> Only packages require befor app start 
+# npm i -g packagename
+
+/////////////////
+for make inbuilt start(noo choosing)
+>open cmd then download npminstall
+>replace the part in script to
+	"start": "node appname(staticapi.js)"
+> the hit the command npm start in command prompt.
+
+
+////////////////
+dev Dependency
+> Just like local
+> Only Dependency used at the time of deployment
+
+//////Step to install global dependencies//////
+#window
+> open cmd as administrator
+> npm i -g packagename
+
+#mac/linux
+> open terminal
+> sudo npm i -g packagename
+
+///////CD////
+npm i -g nodemon
+
+
+GET >>> Get the data 
+POST
+PUT
+DELETE
+
+
+var a = 10
+a>10?"hii":"Bie"
+'Bie'
+a==10?"hii":"Bie"
+'hii'
+
+# Download & simple install
+https://www.mongodb.com/try/download/community
+
+# Window
+Inside C drive make folder by the name of data
+C:\data
+Inside data make folder by the name of db
+C:\data\db
+
+
+# mac & linux
+> open terminal
+> sudo mkdir data/db
+
+
+//////
+# params
+> what we pass after / in url
+> We need to define params in route
+> Complusory to pass parameters if defined
+# Query params
+> what we pass after ? in url
+> No Need to define params in route
+> Not Complusory to pass QueryParams
+
+
+download Redis > https://github.com/dmajkic/redis/downloads
+
+
+////////
+KEYS *
+set key value
+get key
+del key
+FlushALl
+
+
+npm i redis@3.1.0
+
+
+> 
+
+npm i -g pm2
+
+pm2 start filename
+pm2 status
+pm2 stop filename
+
+
+json-web-token
+
+/////////////
+/******GetAllUser*****/
+(GET)> http://localhost:5000/api/auth/users
+
+/******Register*****/
+(POST)> http://localhost:5000/api/auth/register
+(body) => {"name":"Aakash", "email":"aa@gmail.com","password":"12345678","phone":343432,role?":"user"}
+
+/******Login*****/
+(POST) => http://localhost:5000/api/auth/login
+(body)  => {"email":"aa@gmail.com","password":"12345678"}
+(response)=> {auth:true,token:'dgsdg'}
+
+/******UserInfo*****/
+(GET) => http://localhost:5000/api/auth/userinfo
+(Header) => {'x-access-token':'token value from login'}
+
+ ////////dummy api///
+ npx json-server --watch db.json --port 8700
+
+ https://dashboard.paytm.com/
+
+
+ pg_ctl -D /usr/local/var/postgres start
+
+ npm i -g firebase
+
+
+ https://github.com/Aakashdeveloper/Node-Interview-Question

@@ -1,5 +1,7 @@
 let express=require('express');
 let app=express()
+//let dotenv=require('dotenv');
+//dotenv.config()
 let port = process.env.PORT||9700;
 let morgan=require('morgan');
 let categoryRouter=require('./src/controller/categoryRoute')
@@ -11,13 +13,8 @@ app.set('views','./src/views');
 
 app.set('view engine','ejs');
 
-
-
-
-
-
 app.get('/',function(req,res){
-    res.render('index')
+    res.render('index1',{title:'View engine'})
 })
 
 app.use('/category',categoryRouter);
